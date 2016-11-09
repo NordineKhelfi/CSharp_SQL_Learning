@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+            this.ActiveControl = textBoxPassword;
             
         }
 
@@ -45,17 +46,21 @@ namespace WindowsFormsApplication1
             bSelect.Visible = true;
             tbAge.Visible = true;
             cbDelete.Visible = true;
+            dataGridView1.Visible = true;
+
+            textBoxServer.Clear();
         }
 
         #region TextBoxes Check 
 
         void ClearBoxes()
         {
-            textBoxServer.Clear();
-            textBoxDB.Clear();
-            textBoxUID.Clear();
+            //textBoxServer.Clear();
+            //textBoxDB.Clear();
+            //tbTable.Clear();
+            //textBoxUID.Clear();
+            //tbAge.Clear();
             textBoxPassword.Clear();
-            tbAge.Clear();
         }
 
         private void textBoxServer_TextChanged(object sender, EventArgs e)
@@ -112,7 +117,8 @@ namespace WindowsFormsApplication1
                 dbc = new DBConnect(textBoxServer.Text, textBoxDB.Text, textBoxUID.Text, textBoxPassword.Text, tbTable.Text);
                 if (dbc.OpenConnection())
                 {
-                    this.Width = 367;
+                    this.Width = 385;
+                    this.Height = 330;
                     SwitchComponents();
                 }
 
@@ -129,7 +135,8 @@ namespace WindowsFormsApplication1
                     dbc = new DBConnect(textBoxServer.Text, textBoxDB.Text, textBoxUID.Text, textBoxPassword.Text, tbTable.Text);
                     if (dbc.OpenConnection())
                     {
-                        this.Width = 367;
+                        this.Width = 385;
+                        this.Height = 330;
                         SwitchComponents();
                     }
                 }
@@ -154,7 +161,8 @@ namespace WindowsFormsApplication1
                 dbc = new DBConnect(textBoxServer.Text, textBoxDB.Text, textBoxUID.Text, textBoxPassword.Text, tbTable.Text);
                 if (dbc.OpenConnection())
                 {
-                    this.Width = 367;
+                    this.Width = 385;
+                    this.Height = 330;
                     SwitchComponents();
                 }
 
@@ -170,7 +178,8 @@ namespace WindowsFormsApplication1
                 dbc = new DBConnect(textBoxServer.Text, textBoxDB.Text, textBoxUID.Text, textBoxPassword.Text, tbTable.Text);
                 if (dbc.OpenConnection())
                 {
-                    this.Width = 367;
+                    this.Width = 385;
+                    this.Height = 330;
                     SwitchComponents();
                 }
 
@@ -186,7 +195,8 @@ namespace WindowsFormsApplication1
                 dbc = new DBConnect(textBoxServer.Text, textBoxDB.Text, textBoxUID.Text, textBoxPassword.Text, tbTable.Text);
                 if (dbc.OpenConnection())
                 {
-                    this.Width = 367;
+                    this.Width = 385;
+                    this.Height = 330;
                     SwitchComponents();
                 }
 
@@ -221,6 +231,9 @@ namespace WindowsFormsApplication1
                 cbDelete.Items.Add(lists[1][i]);
             }
             bDelete.Enabled = false;
+
+            dataGridView1.DataSource = dbc.bindingSource1;
+
         }
 
         private void bInsert_Click(object sender, EventArgs e)

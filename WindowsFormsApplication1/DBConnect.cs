@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -14,6 +16,7 @@ namespace WindowsFormsApplication1
 
         public MySqlConnection sqlConnect;
         string table;
+        public BindingSource bindingSource1;
 
 
         public DBConnect(string server, string database, string uid, string password, string table)
@@ -81,7 +84,7 @@ namespace WindowsFormsApplication1
         //Select statement
         public List<String>[] Select()
         {
-            string query = "SELECT * from " + table;
+            string query = "SELECT * from " + table + " ORDER BY age;";
 
             List<String>[] lists = new List<string>[3];
             lists[0] = new List<string>();
@@ -94,7 +97,7 @@ namespace WindowsFormsApplication1
 
                 //Create a data reader and execute the command
                 MySqlDataReader sqlDataReader = sqlCmd.ExecuteReader();
-
+                               
                 //Read the data and store them in the lists
                 if (sqlDataReader.HasRows)
                     while (sqlDataReader.Read())
@@ -107,6 +110,16 @@ namespace WindowsFormsApplication1
                     MessageBox.Show("Data Reader hasn't rows.");
                 //Close data reader
                 sqlDataReader.Close();
+
+
+                //Create a data Adapter 
+                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCmd);
+                DataTable dataTable = new DataTable();
+
+                sqlDataAdapter.Fill(dataTable);
+
+                bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = dataTable;
 
                 return lists;
             }

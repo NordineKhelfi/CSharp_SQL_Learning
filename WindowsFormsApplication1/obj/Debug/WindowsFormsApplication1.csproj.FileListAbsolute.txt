@@ -9,3 +9,12 @@ c:\users\djazair\documents\visual studio 2015\Projects\WindowsFormsApplication1\
 c:\users\djazair\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 c:\users\djazair\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\Djazair\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\n.khelfi\Documents\GitHub\CSharp_SQL_Learning\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

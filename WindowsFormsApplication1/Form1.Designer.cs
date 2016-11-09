@@ -46,6 +46,8 @@
             this.bSelect = new System.Windows.Forms.Button();
             this.tbTable = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxServer
@@ -54,6 +56,7 @@
             this.textBoxServer.Name = "textBoxServer";
             this.textBoxServer.Size = new System.Drawing.Size(100, 20);
             this.textBoxServer.TabIndex = 0;
+            this.textBoxServer.Text = "192.168.30.249";
             this.textBoxServer.TextChanged += new System.EventHandler(this.textBoxServer_TextChanged);
             this.textBoxServer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxServer_KeyDown);
             // 
@@ -99,6 +102,7 @@
             this.textBoxDB.Name = "textBoxDB";
             this.textBoxDB.Size = new System.Drawing.Size(100, 20);
             this.textBoxDB.TabIndex = 5;
+            this.textBoxDB.Text = "test";
             this.textBoxDB.TextChanged += new System.EventHandler(this.textBoxDB_TextChanged);
             this.textBoxDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDB_KeyDown);
             // 
@@ -107,7 +111,8 @@
             this.textBoxUID.Location = new System.Drawing.Point(70, 116);
             this.textBoxUID.Name = "textBoxUID";
             this.textBoxUID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxUID.TabIndex = 6;
+            this.textBoxUID.TabIndex = 7;
+            this.textBoxUID.Text = "Claude";
             this.textBoxUID.TextChanged += new System.EventHandler(this.textBoxUID_TextChanged);
             this.textBoxUID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUID_KeyDown);
             // 
@@ -115,9 +120,9 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(70, 143);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '●';
             this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.TabIndex = 8;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyDown);
             // 
@@ -134,7 +139,7 @@
             // 
             // bInsert
             // 
-            this.bInsert.Location = new System.Drawing.Point(266, 37);
+            this.bInsert.Location = new System.Drawing.Point(280, 37);
             this.bInsert.Name = "bInsert";
             this.bInsert.Size = new System.Drawing.Size(75, 23);
             this.bInsert.TabIndex = 9;
@@ -175,7 +180,7 @@
             // bDelete
             // 
             this.bDelete.Enabled = false;
-            this.bDelete.Location = new System.Drawing.Point(266, 67);
+            this.bDelete.Location = new System.Drawing.Point(280, 67);
             this.bDelete.Name = "bDelete";
             this.bDelete.Size = new System.Drawing.Size(75, 23);
             this.bDelete.TabIndex = 13;
@@ -197,7 +202,7 @@
             // 
             // bSelect
             // 
-            this.bSelect.Location = new System.Drawing.Point(266, 93);
+            this.bSelect.Location = new System.Drawing.Point(280, 93);
             this.bSelect.Name = "bSelect";
             this.bSelect.Size = new System.Drawing.Size(75, 23);
             this.bSelect.TabIndex = 15;
@@ -211,7 +216,8 @@
             this.tbTable.Location = new System.Drawing.Point(70, 90);
             this.tbTable.Name = "tbTable";
             this.tbTable.Size = new System.Drawing.Size(100, 20);
-            this.tbTable.TabIndex = 16;
+            this.tbTable.TabIndex = 6;
+            this.tbTable.Text = "table1";
             this.tbTable.TextChanged += new System.EventHandler(this.tbTable_TextChanged);
             // 
             // label5
@@ -223,11 +229,25 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Table";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 119);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(343, 165);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 293);
+            this.ClientSize = new System.Drawing.Size(227, 265);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbTable);
             this.Controls.Add(this.bSelect);
@@ -247,7 +267,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxServer);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DB Explorer";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +294,7 @@
         private System.Windows.Forms.Button bSelect;
         private System.Windows.Forms.TextBox tbTable;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
